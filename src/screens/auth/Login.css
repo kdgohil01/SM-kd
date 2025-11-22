@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+.flip-login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #0a0a0a;
+  perspective: 1500px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Main Brand Header - Outside flip container */
+.brand-header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  z-index: 10;
+}
+
+.brand-logo-main {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.75rem;
+}
+
+.brand-name-main {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+#container {
+  width: 95%;
+  max-width: 800px;
+  height: 550px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px -10px rgba(0, 0, 0, 0.3), 0 10px 10px -10px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+}
+
+#container > div {
+  position: absolute;
+  width: 50%;
+  min-width: 350px;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  padding: 1.5em 3em;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+
+
+/* Form Title */
+.form-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin: 1.5em auto;
+}
+
+/* Login Form */
+.login {
+  left: 0;
+  background: #1a1a1a;
+  border-radius: 20px 0 0 20px;
+  z-index: 4;
+}
+
+.close .login {
+  z-index: 4;
+}
+
+.active .login {
+  z-index: 1;
+}
+
+.login .flip-input {
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  padding: 10px 15px;
+  margin: 6px 0;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.login .flip-input::placeholder {
+  color: #888888;
+}
+
+.login .flip-input:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-color: #3b82f6;
+}
+
+.login .flip-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.flip-form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+}
+
+.flip-form-options .remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.flip-form-options .remember input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.flip-form-options .forget {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.flip-form-options .forget:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.clearfix {
+  clear: both;
+  display: table;
+}
+
+.login .flip-button {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 0.8em 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #3b82f6;
+  color: #ffffff;
+  border: 2px solid #3b82f6;
+  transition: all 0.2s;
+}
+
+.login .flip-button:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.login .flip-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Register Form */
+.register {
+  right: 0;
+  z-index: 1;
+  border-radius: 0 20px 20px 0;
+  background: #1a1a1a;
+}
+
+.close .register {
+  z-index: 1;
+}
+
+.active .register {
+  z-index: 5;
+}
+
+.register .flip-input {
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  padding: 10px 15px;
+  margin: 6px 0;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.register .flip-input::placeholder {
+  color: #888888;
+}
+
+.register .flip-input:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-color: #3b82f6;
+}
+
+.register .flip-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.register .flip-button {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 0.8em 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #3b82f6;
+  color: #ffffff;
+  border: 2px solid #3b82f6;
+  transition: all 0.2s;
+}
+
+.register .flip-button:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.register .flip-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Auth text styles */
+.auth-text-muted {
+  color: #a0a0a0;
+}
+
+.auth-link {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.auth-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Flip Pages */
+.page {
+  right: 0;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  transform-origin: left center;
+  transition: animation 0.6s ease-in-out;
+}
+
+.flip-page-button {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 0.8em 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 40px;
+  transition: all 0.2s;
+  margin-top: 1.5rem;
+}
+
+.flip-page-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.flip-page-button:active {
+  transform: scale(0.95);
+}
+
+/* Front Page - Sign Up Side */
+.front {
+  background: linear-gradient(-45deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  z-index: 3;
+}
+
+.dark .front {
+  background: linear-gradient(-45deg, #1e40af 0%, #4f46e5 50%, #6d28d9 100%);
+}
+
+/* Back Page - Login Side */
+.back {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #3b82f6 100%);
+  z-index: 2;
+}
+
+.dark .back {
+  background: linear-gradient(135deg, #6d28d9 0%, #4f46e5 50%, #1e40af 100%);
+}
+
+.back .content {
+  transform: rotateY(180deg);
+}
+
+/* Flip Animations */
+.active .front {
+  animation: rot-front 0.6s ease-in-out normal forwards;
+}
+
+.active .back {
+  animation: rot-back 0.6s ease-in-out normal forwards;
+}
+
+.close .front {
+  animation: close-rot-front 0.6s ease-in-out normal forwards;
+}
+
+.close .back {
+  animation: close-rot-back 0.6s ease-in-out normal forwards;
+}
+
+@keyframes rot-front {
+  from {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+}
+
+@keyframes close-rot-front {
+  from {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+}
+
+@keyframes rot-back {
+  from {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+}
+
+@keyframes close-rot-back {
+  from {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+}
+
+.active .login .content {
+  animation: hide 0.7s ease-in-out normal forwards;
+  pointer-events: none;
+}
+
+.close .login .content {
+  animation: show 0.7s ease-in-out normal forwards;
+  pointer-events: auto;
+}
+
+.active .register .content {
+  animation: show 0.7s ease-in-out normal forwards;
+  pointer-events: auto;
+}
+
+.close .register .content {
+  animation: hide 0.7s ease-in-out normal forwards;
+  pointer-events: none;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flip-login-container {
+    padding: 1rem;
+  }
+
+  .brand-header-main {
+    margin-bottom: 1.5rem;
+  }
+
+  .brand-logo-main {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name-main {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+
+  #container {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+  }
+
+  #container > div {
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+    border-radius: 20px;
+  }
+
+  .login {
+    border-radius: 20px;
+    background: #1a1a1a;
+  }
+
+  .page {
+    display: none;
+  }
+
+  .content {
+    padding: 1.5em;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+    color: #ffffff;
+  }
+}
+
